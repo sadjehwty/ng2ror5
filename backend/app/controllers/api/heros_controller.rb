@@ -1,4 +1,4 @@
-class HerosController < ApplicationController
+class API::HerosController < ApplicationController
   before_action :set_hero, only: [:show, :update, :destroy]
 
   # GET /heros
