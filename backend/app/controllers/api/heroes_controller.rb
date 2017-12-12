@@ -12,7 +12,15 @@ class Api::HeroesController < ApplicationController
   def show
     render json: @hero
   end
-
+  
+  # GET /heroes/search
+  def search
+    cond = "%#{params[:query]}%"
+    @heroes = Hero.where("name like ?", cond)
+    
+    render json: @heroes
+  end
+  
   # POST /heroes
   def create
     @hero = Hero.new(hero_params)
