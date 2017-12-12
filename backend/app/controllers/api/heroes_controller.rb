@@ -1,19 +1,19 @@
-class API::HerosController < ApplicationController
+class API::HeroesController < ApplicationController
   before_action :set_hero, only: [:show, :update, :destroy]
 
-  # GET /heros
+  # GET /heroes
   def index
-    @heros = Hero.all
+    @heroes = Hero.all
 
-    render json: @heros
+    render json: @heroes
   end
 
-  # GET /heros/1
+  # GET /heroes/1
   def show
     render json: @hero
   end
 
-  # POST /heros
+  # POST /heroes
   def create
     @hero = Hero.new(hero_params)
 
@@ -24,7 +24,7 @@ class API::HerosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /heros/1
+  # PATCH/PUT /heroes/1
   def update
     if @hero.update(hero_params)
       render json: @hero
@@ -33,7 +33,7 @@ class API::HerosController < ApplicationController
     end
   end
 
-  # DELETE /heros/1
+  # DELETE /heroes/1
   def destroy
     @hero.destroy
   end

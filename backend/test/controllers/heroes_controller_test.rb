@@ -1,18 +1,18 @@
 require 'test_helper'
 
-class HerosControllerTest < ActionDispatch::IntegrationTest
+class HeroesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @hero = heros(:one)
+    @hero = heroes(:one)
   end
 
   test "should get index" do
-    get heros_url, as: :json
+    get heroes_url, as: :json
     assert_response :success
   end
 
   test "should create hero" do
     assert_difference('Hero.count') do
-      post heros_url, params: { hero: { name: @hero.name } }, as: :json
+      post heroes_url, params: { hero: { name: @hero.name } }, as: :json
     end
 
     assert_response 201
