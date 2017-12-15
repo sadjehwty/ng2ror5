@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../frontend/
+cd frontend
 ng build
 cp -R dist/* ../backend/public/
 cd ../backend/
