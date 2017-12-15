@@ -7,3 +7,5 @@ git add .
 git commit -am "pro heroku"
 git push heroku master -f
 git reset --hard HEAD^
+cd ..
+git checkout .
