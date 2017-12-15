@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Test: ngStep7';
+  title = 'Angular 5 + Ruby on Rails 5';
 }
